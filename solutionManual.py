@@ -167,15 +167,15 @@ import os
 #
 # out = list(filter(is_palindrome,['12321','9010109','134']))
 # print(out)
-def findMinAndMax(L):
-    # L = [7, 1, 3, 9, 5]
-    i = 0
-    j = 0
-    for j in range(len(L)-1):
-        for i in range(len(L)-1):
-            if L[i] > L[i+1]:
-                L[i],L[i+1] = L[i+1],L[i]
-    return(L)
+# def findMinAndMax(L):
+#     # L = [7, 1, 3, 9, 5]
+#     i = 0
+#     j = 0
+#     for j in range(len(L)-1):
+#         for i in range(len(L)-1):
+#             if L[i] > L[i+1]:
+#                 L[i],L[i+1] = L[i+1],L[i]
+#     return(L)
 
 
 # 测试
@@ -189,7 +189,10 @@ def findMinAndMax(L):
 #     print('测试失败!')
 # else:
 #     print('测试成功!')
-a = findMinAndMax([7, 1])
-b =findMinAndMax([7, 1, 3, 9, 5])
-print(a)
-print(b)
+# a = findMinAndMax([7, 1])
+# b =findMinAndMax([7, 1, 3, 9, 5])
+# print(a)
+# print(b)
+import interfaceTest
+now_time = interfaceTest.interfaceTest().get_today()
+print(now_time)
