@@ -1,0 +1,2 @@
+host,port,user,password,db,charset
+172.17.227.221,3306,root,iytAQbjN#GSKhe21,qkd_passport,utf8mb4

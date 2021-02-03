@@ -112,7 +112,7 @@
 # for i in range(3):
 #     c = int(input('输入:'))
 #     a.append(c)
-# print(a)
+# print(a)1
 # for q in range(len(a)):
 #     for p in range(q+1,len(a)):
 #         if a[q] > a[p]:
@@ -194,5 +194,36 @@ import os
 # print(a)
 # print(b)
 import interfaceTest
-now_time = interfaceTest.interfaceTest().get_today()
-print(now_time)
+# now_time = interfaceTest.interfaceTest().get_today()
+# print(now_time)
+# class format_error(Exception):
+#     print('12121')
+# class abc:
+#     while True:
+#         try:
+#             x = float(input('请输入第一个数字：'))
+#             y = float(input('请输入第二个数字：'))
+#             a = x/y
+#             print(a)
+#             if not isinstance(x, float):
+#                 raise format_error()
+#
+#
+#         # except ValueError as e:
+#         except:
+#             # if 'could not convert string to float' in e.args[0]:
+#             #     print('不符合格式')
+#             # else:
+#             # print('除数不能为0')
+#             pass
+from test121 import addcount
+class compute():
+    # def __int__(self,a,b):
+    #     self.a = a
+    #     self.b = b
+    def add(self,a,b):
+        c = addcount(a,b)
+        return c
+if __name__ == '__main__':
+    base = compute()
+    base.add(1,2)

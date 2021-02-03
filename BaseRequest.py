@@ -1,25 +1,19 @@
 import requests
 import json
 class BaseRequest():
-    def request_get(self,session,url, data, header=None, cookie=None):
-        if header==None and cookie==None:
-            res = session.get(url=url,params=data)
-        else:
-            res = session.get(url=url, params=data, header=header)
+    def request_get(self,session,url, data, header):
+        res = session.get(url=url, params=data, headers=header)
         return res
-    def request_post(self,session,url, data, header=None, cookie=None):
-        if header==None and cookie==None:
-            res = session.post(url=url, data=data)
-        else:
-            res = session.post(url=url, data=data, header=header, cookie=cookie)
+    def request_post(self,session,url, data, header):
+        res = session.post(url=url, data=data, headers=header)
         return res
-    def run_main(self,session,method,url, data, header=None, cookie=None):
+    def run_main(self,session,method,url, data=None, header=None):
         try:
             res = ''
             if method == 'get':
-                res = BaseRequest().request_get(session=session,url=url,data=data,header=header,cookie=cookie)
+                res = BaseRequest().request_get(session=session,url=url,data=data,header=header)
             elif method == 'post':
-                res = BaseRequest().request_post(session=session,url=url, data=data, header=header, cookie=cookie)
+                res = BaseRequest().request_post(session=session,url=url, data=data, header=header)
             return res
         except Exception as e:
             print('请求主函数调用失败：{}'.format(e))
